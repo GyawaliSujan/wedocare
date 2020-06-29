@@ -1,0 +1,83 @@
+{% load static %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-fixed-top sticky-top" xmlns="http://www.w3.org/1999/html">
+		<div class="container-fluid">   <!-- container fluid take 100% of the screen -->
+            <a class="navbar-brand" href="#"><img src="{% static 'img/logo.png' %}"> </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler"><i class="fa fa-bars" aria-hidden="true"></i></span>
+			</button>
+	<!-- Toggler icon is created upto now and lets create nav item  menu when collapse now -->
+        <!-- ml-auto pulls the things to right hand side when expanding nav -->
+					<!-- active is used to show first item active in Navbar -->
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                    <li
+							{% if 'dashboard' in request.path %}
+								class="nav-item active"
+							{% else %}
+								class="nav-item"
+							{% endif %}
+					>
+						<a class="nav-link" href="{% url 'dashboard' %}"> Welcome {{user.username}} (Dashboard) </a>
+					</li>
+                    <li class="nav-item mr-3">
+                        <a href="javascript:{document.getElementById('logout').submit()}"
+                           class="nav-link">
+                            <i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <form action="{% url 'logout' %}" method="POST" id="logout">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+                    </li>
+                {% else %}
+					<li
+                            {% if '/' == request.path %}
+								class="nav-item active"
+							{% else %}
+								class="nav-item"
+							{% endif %}
+                    >
+						<a class="nav-link" href="{% url 'index' %}">Home</a>
+					</li>
+                    <li
+							{% if 'about' in request.path %}
+								class="nav-item active"
+							{% else %}
+								class="nav-item"
+							{% endif %}
+					>
+						<a class="nav-link scroll" href="#about">About</a>
+					</li>
+                    <li
+							{% if 'Team' in request.path %}
+								class="nav-item active"
+							{% else %}
+								class="nav-item"
+							{% endif %}
+					>
+						<a class="nav-link scroll" href="#scrolltoteam">Team </a> <!-- To scroll automaticall put the target id in href section with #-->
+					</li>
+					<li
+						{% if 'Contact' in request.path %}
+								class="nav-item active"
+						{% else %}
+								class="nav-item"
+						{% endif %}
+					>
+						<a class="nav-link scroll" href="#contactus">Contact </a>
+					</li>
+					<li
+						{% if 'Login' in request.path %}
+                            class="nav-item active"
+                        {% else %}
+                            class="nav-item"
+                        {% endif %}
+					>
+						<a class="nav-link" href="{% url 'login' %}">Login </a>
+					</li>
+                {% endif %}
+				</ul>
+			</div>
+		</div>
+	</nav>
