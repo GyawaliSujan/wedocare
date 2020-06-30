@@ -25,7 +25,7 @@ SECRET_KEY = 'd51-m)co$6qq%5&kyz_-zd_pp7!6u4(g4ggn4et0)jloglk@3o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".wedocare.herokuapp.com"]
+ALLOWED_HOSTS = [".wedocare.herokuapp.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
