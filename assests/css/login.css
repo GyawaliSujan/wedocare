@@ -1,0 +1,237 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /*-- Poppins is google font and sans-serif is background font */
+  color: #222; /* all font color */
+}
+#top{
+  background-color: #d32f2f;
+  padding: 20px;
+  color: white;
+  position: fixed; /* z-index rakhna ra botton right rakhera button left corner ma button lyauna use it */
+  bottom:30px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 5;  /* -- yesle aru image bhanda top down button lai agadi lyaidinxa, so keep z-index main section ko bhanda badi rakhnu parxa ani position fix*/
+  display: none; /* script ma program garera scroll garda dekhauna ko lagi */
+}
+#top:hover{
+  background-color: pink;
+}
+#arrow{
+  border: solid black;
+  border-width: 0 3px 3px 0; /* Top Right Bottom Left pixels */
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+.navbar{
+  width: 100%;
+  padding: .8rem; /* 1 rem =16 px */
+  background-color: #00FF00 !important;
+  opacity: 0.9;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.navbar-nav li:hover{
+  background-color:gray;
+}
+.nav-link { /*changes menu individual items */
+font-size: 1.1em ; /* 1.1em=1.1*16=17.6px */
+}
+.navbar.black{ /* This is the black class called by jquery to change nav Color */
+  background-color:#00BFFF !important;
+  position: fixed;
+}
+.breadcrumb {
+    width: 100%;
+    padding-right: 50px;
+}
+.card0 {
+    background-color: lightseagreen;
+    border-radius: 0px
+}
+
+.card2 {
+    margin: 0px 40px
+}
+
+.image {
+    width: 300px;
+    height: 280px
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+.or {
+    width: 10%;
+    font-weight: bold
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-blue:hover {
+    background-color: #000;
+    cursor: pointer
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #1A237E
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+}
+footer{
+  background-color: #09121B;
+  color: #d5d5d5;
+  padding: 2rem;
+}
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+footer a{
+  color:#d5d5d5;
+}
+hr.light-100{
+  width: 100%;
+  border-top: 1px solid #d5d5d5;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
