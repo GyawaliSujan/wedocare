@@ -13,15 +13,18 @@ html, body{
     background-color: #e9ecef;
     border-radius: 0.25rem;
 }
-
+.justify-text{
+  text-align: justify;
+  text-justify: inter-word;
+}
 #showcase-inner{
-    background-color: #00FF00;
+    background-color: deeppink;
     color: black;
     margin-top: 1px;
     padding: 3rem;
 }
-img {
-    width:100%;
+.about-img img{
+    width: 100%;
 }
 
 #work {

@@ -1,8 +1,23 @@
-html, body{
-  height: 100%;
-  width: 100%;
-  font-family: 'Poppins', sans-serif; /*-- Poppins is google font and sans-serif is background font */
-  color: #222; /* all font color */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html, body {
+    height: 100%;
+}
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1px;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: black;
+}
+.justify-text{
+  text-align: justify;
+  text-justify: inter-word;
+}
+hr{
+    border-top: 2px solid gray;
 }
 #top{
   background-color: #d32f2f;
@@ -29,50 +44,71 @@ html, body{
   padding: 3px;
   transform: rotate(-135deg);
 }
-.breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    list-style: none;
-    background-color: #e9ecef;
-    border-radius: 0.25rem;
-}
 .navbar{
   width: 100%;
   padding: .8rem; /* 1 rem =16 px */
-  background-color: #00FF00 !important;
-  opacity: 0.9;
+  background-color:black !important;
+  opacity: 0.8;
 }
 .navbar-nav li {
   padding-right: 20px;
 }
-.navbar-nav li:hover{
-  background-color:gray;
+
+.nav-link {
+    font-size: 1.1em ;
+    display: flex;
+    color: white !important;
 }
-.nav-link { /*changes menu individual items */
-font-size: 1.1em ; /* 1.1em=1.1*16=17.6px */
+.nav-link:hover{
+    color: dodgerblue!important;
 }
-.navbar.black{ /* This is the black class called by jquery to change nav Color */
-  background-color:#00BFFF !important;
+.navbar-toggler{
+    color:#fff3cd !important;
+    float:right;
+    line-height: 25px;
+    font-size: 20px;
+    padding-bottom: 1px;
+    position: relative;
+    z-index: 0;
+}
+.navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: visible;
+    color: white;
+    border: white;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    position: relative;
+    z-index: 0;
+}
+.navbar.black{
+  background-color:deeppink !important; /* This is the black class called by jquery to change nav Color */
   position: fixed;
+}
 }
 .breadcrumb {
     width: 100%;
     padding-right: 50px;
 }
-.card0 {
-    background-color: lightseagreen;
-    border-radius: 0px
+.card1 {
+    border-radius: 5px;
+    padding-left: 30px;
 }
 
 .card2 {
-    margin: 0px 40px
+    margin: 0px 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+
 }
 
-.image {
-    width: 300px;
-    height: 280px
+.login-img img{
+    width: 100%;
+    height: 100%;
 }
 
 .border-line {
@@ -195,6 +231,31 @@ a {
     color: #fff;
     background-color: #1A237E
 }
+.table{
+    text-align: center;
+}
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: black!important;
+}
+.scroll2 {
+  width:100%;
+  height:30px;
+  overflow:hidden;
+  position:relative;
+  background: black;
+}
+ .scrollingtext {
+  white-space:nowrap;
+  position:absolute;
+  color: white;
+ }
+ .register_img{
+     background-image: url("../img/oldwoman.jpg");
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+ }
 
 @media screen and (max-width: 991px) {
     .logo {
@@ -234,4 +295,14 @@ hr.light-100{
   border-top: 1px solid #d5d5d5;
   margin-top: .8rem;
   margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .card2 {
+        padding-top: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .card2 {
+        padding-top: 10px;
+    }
 }

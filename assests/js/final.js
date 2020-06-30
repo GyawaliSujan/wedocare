@@ -9,7 +9,6 @@ $(document).ready(function() {
 		$('#top').click(function () {
 			$('HTML').animate({scrollTop: 0}, 1000);
 	});
-
 	setTimeout(function(){
         $('#message').fadeOut('slow');
     }, 4000);
@@ -18,6 +17,22 @@ $(document).ready(function() {
     	duration:600,
     	once:true,
 	});
+    $(document).ready(function() {
+    	$('.scrollingtext').bind('marquee', function() {
+             var ob = $(this);
+             var tw = ob.width();
+             var ww = ob.parent().width();
+             ob.css({ right: -tw });
+             ob.animate({ right: ww }, 55000, 'linear', function() {
+                 ob.trigger('marquee');
+             });
+         }).trigger('marquee');
+     });
+
+    // $(".navbar-toggler").click(function () {
+     //   $("#navbarResponsive").slideToggle(2000);
+     // });
+
 	$(window).scroll(function(){
 		if($(window).scrollTop()>500)
 		{

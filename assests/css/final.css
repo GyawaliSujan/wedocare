@@ -10,7 +10,14 @@ body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     background: #fff;
-    color: #777;
+    color: black;
+}
+.justify-text{
+  text-align: justify;
+  text-justify: inter-word;
+}
+hr{
+    border-top: 2px solid gray;
 }
 #top{
   background-color: #d32f2f;
@@ -40,18 +47,29 @@ body {
 .navbar{
   width: 100%;
   padding: .8rem; /* 1 rem =16 px */
-  background-color:#00FF00 !important;
-  color: #d5d5d5 !important;
-  opacity: 0.9;
+  background-color:black !important;
+  opacity: 0.8;
 }
 .navbar-nav li {
   padding-right: 20px;
 }
-.navbar-nav li a:hover{
-  background-color:gray;
+
+.nav-link {
+    font-size: 1.1em ;
+    display: flex;
+    color: white !important;
 }
-.nav-link { /*changes menu individual items */
-font-size: 1.1em ; /* 1.1em=1.1*16=17.6px */
+.nav-link:hover{
+    color: dodgerblue!important;
+}
+.navbar-toggler{
+    color:#fff3cd !important;
+    display: inline;
+    float:right;
+    line-height: 25px;
+    font-size: 20px;
+    padding-bottom: 1px;
+    z-index:10;
 }
 .navbar-collapse {
     padding-right: 15px;
@@ -63,10 +81,13 @@ font-size: 1.1em ; /* 1.1em=1.1*16=17.6px */
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
 }
 .navbar.black{
-  background-color:#00BFFF !important; /* This is the black class called by jquery to change nav Color */
+  background-color:darkslategray !important; /* This is the black class called by jquery to change nav Color */
   position: fixed;
 }
-
+#slides{
+    z-index:0;
+  /*position: absolute; */
+}
 .carousel-inner img {
   width: 100%;
   height: 100%;
@@ -144,6 +165,33 @@ font-size: 1.1em ; /* 1.1em=1.1*16=17.6px */
   border-radius: 0px;
   background-color: gray;
 }
+.blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: #00FF00;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
 #esewa:hover{
   background-color: black;
 }
@@ -177,6 +225,11 @@ hr.underline{
   padding: 10px;
   position: relative;
   overflow: hidden;
+}
+.card a{
+  font-size: 500rem;
+  padding:5px;
+    position: center;
 }
 .card-text{
   font-family: 'Oswald', sans-serif;
@@ -236,7 +289,7 @@ p.card-text{
 }
 .content ul li a {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 40px;
 }
 .content ul li a i {
   color: black;
@@ -323,6 +376,18 @@ hr.light-100{
   margin-top: .8rem;
   margin-bottom: 1rem;
 }
+.scroll2 {
+  width:100%;
+  height:30px;
+  overflow:hidden;
+  position:relative;
+  background: black;
+}
+ .scrollingtext {
+  white-space:nowrap;
+  position:absolute;
+  color: white;
+ }
 
 
 /*---Media Queries --*/
