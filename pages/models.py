@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 class team(models.Model):
     name = models.CharField(max_length=20)
-    designation=models.CharField(max_length=50)
-    image=models.ImageField(upload_to='photos/%Y/%m/%d')
+    designation = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='photos')
     facebook = models.URLField(max_length=500, blank=True)
-    instagram= models.URLField(max_length=500, blank=True)
+    instagram = models.URLField(max_length=500, blank=True)
     twitter = models.URLField(max_length=500, blank=True)
     linkedin = models.URLField(max_length=500, blank=True)
     is_published = models.BooleanField(default=True)

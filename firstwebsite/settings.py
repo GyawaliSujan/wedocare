@@ -9,23 +9,26 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import environ
+import sys
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd51-m)co$6qq%5&kyz_-zd_pp7!6u4(g4ggn4et0)jloglk@3o'
+SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env.bool('DEBUG', False)
 
-ALLOWED_HOSTS = [".wedocare.herokuapp.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = env.list('HOST', default=['*'])
 
 
 # Application definition
@@ -77,17 +80,8 @@ WSGI_APPLICATION = 'firstwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'firstwebsite',
-        'USER':'postgres',
-        'PASSWORD':'slamg123',
-        'HOST':'localhost'
-    }
+   'default': env.db()
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -130,8 +124,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'firstwebsite/static')
 ]
 #MEDIA FOLDER SETTINGS
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
-MEDIA_URL='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 #MESSAGES
 from django.contrib.messages import constants as messages

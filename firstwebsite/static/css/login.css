@@ -305,4 +305,11 @@ hr.light-100{
     .card2 {
         padding-top: 10px;
     }
+
+    .register_img {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 }

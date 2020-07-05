@@ -9,7 +9,7 @@ def index(request):
     context = {
         'teams': teams
     }
-    return render(request, 'pages/index.html',context)
+    return render(request, 'pages/index.html', context)
 
 
 def about(request):
