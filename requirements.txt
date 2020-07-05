@@ -36,3 +36,4 @@ virtualenv-clone==0.5.4
 virtualenvwrapper-win==1.2.6
 wcwidth==0.1.9
 whitenoise==5.1.0
+django-environ==0.4.5
