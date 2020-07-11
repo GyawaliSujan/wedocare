@@ -10,6 +10,7 @@ colorama==0.4.3
 distlib==0.3.0
 dj-database-url==0.5.0
 Django==3.0.4
+django-environ==0.4.5
 django-filter==2.3.0
 django-storages==1.9.1
 docutils==0.15.2
@@ -36,4 +37,3 @@ virtualenv-clone==0.5.4
 virtualenvwrapper-win==1.2.6
 wcwidth==0.1.9
 whitenoise==5.1.0
-django-environ==0.4.5
